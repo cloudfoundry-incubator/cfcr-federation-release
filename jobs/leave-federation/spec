@@ -1,0 +1,11 @@
+---
+name: join-federation
+
+templates:
+  bin/run: bin/run
+  config/kubeconfig.erb: config/kubeconfig
+
+packages:
+- federation2
+
+properties: {}

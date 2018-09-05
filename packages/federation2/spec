@@ -1,0 +1,9 @@
+---
+name: federation2
+
+dependencies: []
+
+files:
+- federation2/kube-apiserver-1.11.0-linux-amd64
+- federation2/kubebuilder-1.0.0-linux-amd64.tar.gz
+- federation2/kubectl-1.11.0-linux-amd64

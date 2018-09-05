@@ -1,0 +1,7 @@
+set -e
+
+mkdir -p "${BOSH_INSTALL_TARGET}/bin/"
+
+cp federation2/kube-apiserver-1.11.0-linux-amd64 ${BOSH_INSTALL_TARGET}/bin/kube-apiserver
+cp federation2/kubectl-1.11.0-linux-amd64 ${BOSH_INSTALL_TARGET}/bin/kubectl
+tar zvxf federation2/kubebuilder-1.0.0-linux-amd64.tar.gz -C ${BOSH_INSTALL_TARGET}/bin/
