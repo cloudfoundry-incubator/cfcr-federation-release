@@ -1,1 +1,6 @@
+---
 name: cfcr-federation
+blobstore:
+  provider: gcs
+  options:
+    bucket_name: cfcr-federation

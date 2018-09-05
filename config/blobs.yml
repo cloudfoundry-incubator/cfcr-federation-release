@@ -1,1 +1,16 @@
---- {}
+federation2/kube-apiserver-1.11.0-linux-amd64:
+  size: 185471375
+  object_id: 8a9d4c7b-25aa-4fb4-637a-03f99376087a
+  sha: 9cea3703fdab8d8b6b4140036b8cf1bd4a88a2d8
+federation2/kubebuilder-1.0.0-linux-amd64.tar.gz:
+  size: 70595160
+  object_id: 46639495-2d69-418e-4143-3c00534958ab
+  sha: 561928af7db9633d16166f3e4109ac966cf93349
+federation2/kubectl-1.11.0-linux-amd64:
+  size: 55421261
+  object_id: 13d73a4d-59c9-4855-4602-b246ddaa6bc0
+  sha: e23f251ca0cb848802f3cb0f69a4ba297d07bfc6
+golang/go-1.11-linux-amd64.tar.gz:
+  size: 127163815
+  object_id: 689e9189-c881-4e8e-6cde-0ab0569cea93
+  sha: 8ffb718cab4371df3495d8f6c0b15c7e6dc28fea
