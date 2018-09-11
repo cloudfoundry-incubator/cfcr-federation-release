@@ -4,6 +4,7 @@ name: deploy-federation
 templates:
   bin/run.erb: bin/run
   config/kubeconfig.erb: config/kubeconfig
+  config/ca.pem.erb: config/ca.pem
 
 packages:
 - federation2

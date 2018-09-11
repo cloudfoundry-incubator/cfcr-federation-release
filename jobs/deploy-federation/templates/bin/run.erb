@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-set -euo
+set -eu
 
 export PATH=$PATH:/var/vcap/packages/federation2/bin
-export KUBECONFIG=/var/vcap/jobs/deploy-federation/config/kubeconfig"
+export KUBECONFIG=/var/vcap/jobs/deploy-federation/config/kubeconfig
 
 SPECS=/var/vcap/packages/federation2/specs
 NS=federation-system
 PUBLIC_NS=kube-multicluster-public
 
-kubectl create ns "${PUBLIC_NS}"
+kubectl create ns "${PUBLIC_NS}" || true
 kubectl create clusterrolebinding federation-admin --clusterrole=cluster-admin \
-	--serviceaccount="${NS}:default"
+	--serviceaccount="${NS}:default" || true
 
 kubectl apply --validate=false -f "${SPECS}"/federation/install.yaml
 kubectl apply --validate=false -f "${SPECS}"/cluster-registry-crd.yaml
