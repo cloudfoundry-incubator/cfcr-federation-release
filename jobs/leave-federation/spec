@@ -1,5 +1,5 @@
 ---
-name: join-federation
+name: leave-federation
 
 templates:
   bin/run: bin/run

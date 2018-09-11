@@ -1,0 +1,19 @@
+---
+name: deploy-federation
+
+templates:
+  bin/run.erb: bin/run
+  config/kubeconfig.erb: config/kubeconfig
+
+packages:
+- federation2
+
+properties:
+  ca_cert:
+    description: The 
+  url:
+    description: The 
+  username:
+    description: The admin username for the Kubernetes cluster
+  password: 
+    description: The admin password for the Kubernetes cluster

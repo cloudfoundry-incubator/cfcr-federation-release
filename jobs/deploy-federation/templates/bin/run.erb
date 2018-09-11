@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo
+
+export PATH=$PATH:/var/vcap/packages/federation2/bin
+export KUBECONFIG=/var/vcap/jobs/deploy-federation/config/kubeconfig"
+
+SPECS=/var/vcap/packages/federation2/specs
+NS=federation-system
+PUBLIC_NS=kube-multicluster-public
+
+kubectl create ns "${PUBLIC_NS}"
+kubectl create clusterrolebinding federation-admin --clusterrole=cluster-admin \
+	--serviceaccount="${NS}:default"
+
+kubectl apply --validate=false -f "${SPECS}"/federation/install.yaml
+kubectl apply --validate=false -f "${SPECS}"/cluster-registry-crd.yaml
+
+for filename in "${SPECS}"/federatedtypes/*.yaml; do
+  kubectl -n "${NS}" apply -f "${filename}"
+done
+
+#CONTEXT="$(kubectl config current-context)"
+#kubefed2 join "${CONTEXT}" --host-cluster-context "${CONTEXT}" --add-to-registry --v=2

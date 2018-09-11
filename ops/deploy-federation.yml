@@ -1,0 +1,16 @@
+- type: replace
+  path: /releases/-
+  value:
+    name: cfcr-federation-release
+    version: latest
+
+- type: replace
+  path: /instance_groups/name=master/jobs/name=deployfederation?
+  value: 
+    name: deployfederation 
+    release: cfcr-federation-release
+    properties:   
+      ca_cert: ((tls-kubernetes.ca))
+      url: ((apiserver_dns))
+      username: admin 
+      password: ((kubo-admin-password))
