@@ -10,6 +10,10 @@ federation2/kubectl-1.11.0-linux-amd64:
   size: 55421261
   object_id: 13d73a4d-59c9-4855-4602-b246ddaa6bc0
   sha: e23f251ca0cb848802f3cb0f69a4ba297d07bfc6
+federation2/kubefed:
+  size: 40229184
+  object_id: 553ccb8c-6e12-4ca9-74c3-9fcfb1930b57
+  sha: a78c257b6fdca0983b5ae4ad43cea3cbf8332dd2
 golang/go-1.11-linux-amd64.tar.gz:
   size: 127163815
   object_id: 689e9189-c881-4e8e-6cde-0ab0569cea93
